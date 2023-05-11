@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Paprika&display=swap');
+html, canvas{
+    background-image: linear-gradient(#d9f2e6, #9fdfbf, #4d97d3, #20496a);
+    background: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+body{
+  color: rgb(23, 44, 75);
+  font-family: Paprika, "Helvetica Neue", "Times New Roman", "san-serif";
+  text-shadow: 2px 2px 5px rgb(73, 217, 222);
+}
+
+.nav ul{
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  background-color: rgba(255, 255, 255, 0.473);
+  backdrop-filter: blur(5px);
+
+}
+
+.nav li a{
+  color: rgb(23, 44, 75);
+  font-family: Paprika, "Helvetica Neue", "Times New Roman", "san-serif";
+  text-shadow: 2px 2px 5px rgb(73, 217, 222);
+}
+
+.nav ul li a::before {
+  content: '';
+  position: absolute;
+  background: #f0eec7;
+  transition: 1s;
+  transform: scale(.9);
+  z-index: -1;
+}
+
+.nav ul li a:hover::before {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #fbf488;
+}
+
+.nav ul li a:hover {
+  color: #f3e95a;
+  box-shadow: 0 0 5px #ffee10;
+  text-shadow: 0 0 5px #ffee10;
+}
+
+
+.toggler {
+   width: 500px;
+  height: 200px;
+  position: relative;
+  margin: 5%;
+  }
+
+
+#effect { 
+  width: 800px;
+  height: 250px;
+  padding: 0.4em;
+  position: absolute;
+  background: #fff;
+}
+#effect h3 { margin: 0; padding: 0.4em; text-align: center; }
+
+#button {
+  margin: 5%;
+   text-decoration: none;
+   position: absolute;  
+   border-color: rgb(73, 217, 222);
+   color: #060606;
+   box-shadow: 0 0 40px 40px #357d93 inset, 0 0 0 0 #1f71eb;
+   transition: all 150ms ease-in-out;
+   font-family: Paprika, Arial, sans-serif;
+   }
+   #button:hover{
+    box-shadow: 0 0 10px 0 #1f71eb inset, 0 0 10px 4px #1f71eb;
+}
+
+
+#tabs {
+  font-family: Paprika, "Helvetica Neue", "Times New";
+  background-color: #d1e6f8;
+  margin: 20px;
+  position: absolute;
+}
+a:hover {
+  color: #f3e95a;
+  box-shadow: 0 0 5px #ffee10;
+  text-shadow: 0 0 5px #ffee10;
+}

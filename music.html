@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music for the Soul</title>
+    <link rel="stylesheet" href="css/music.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+</head>
+<header>
+    <nav class="nav">
+        <ul>
+           <li><a href="home.html">Home</a></li> 
+            <li><a href="TakeABreath.html">Take a Breath</a></li>
+            <li><a href="music.html">Music for the Soul</a></li>
+            <li><a href="support.html">Support</a></li>
+            <li><a href="FAQ.html">FAQ</a></li>
+        </ul>
+    </nav>
+</header>
+<body>
+
+    <div class="toggler">
+        <div id="effect" class="ui-widget-content ui-corner-all">
+            <h3 class="ui-widget-header ui-corner-all">Frequencies</h3>
+        <p>White noise has always been known as the soft static sound a radio or televistion emits. Pink noise is a lower frequency, often associated with rainfall or traffic. <br>Brown noise mimics a type of erratic pattern called "Brownian Motion", named after Scotish botanist, Robert Brown. While evidence is still being gathered on its effectiveness, its incredibly low frequency has been proving to highly reduce stress.<br>This page introduces these different frequencies and how they can enhance and benefit your life. </p>
+        </div>
+    </div>
+    <button id="button" class="ui-state-default ui-corner-all">Toggle Effect</button>
+<br><br><br><br>
+
+    <div id="tabs">
+        <ul>
+            <li><a href="#tabs-1"></a>Lofi Hiphop for the Soul and Study</li>
+            <li><a href="#tabs-2"></a>Sounds of Nature</li>
+            <li><a href="#tabs-3"></a>Meditaion Sounds and Tones</li>
+        </ul>
+        <div id="tabs-1"><a href="https://open.spotify.com/artist/0Nrx6TQe5XBFEuRBhZTGpC?si=qJPDRp7ISlyVVy6GJ9Ewdw">Lofi Girl Spotify</a><br><br><a href="https://music.apple.com/us/playlist/study-lofi/pl.bf7a3cbca49644d8a33f09c1285aef5c">Lofi Girl Apple Music</a><br><br>Lofi Girl is one of my favorite stations to sleep, decompress or study to. The lofi sound provides a soothing white/brown noise type effect.</div>
+        <div id="tabs-2"><a href="https://open.spotify.com/playlist/4HTBQhKq1is4dO1vcNKtyC?si=9e8f746da9c4405f">Nature Sounds for Sleep Spotify</a><br><a href="https://open.spotify.com/playlist/37i9dQZF1DX2DjEOgyULQF?si=bec702f4a91f4727">Nature Sounds for Relaxation</a><br><br><a href="https://music.apple.com/us/album/peaceful-nature-sounds/1542606903">Nature Sounds Apple Music</a><br><a href="https://music.apple.com/us/album/relaxing-rain/289043562"></a>Relaxing Rain Apple Music<br><br>The simple sounds of nature can help ground and center you from the chaos of life.</div>
+        <div id="tabs-3"><a href="https://open.spotify.com/playlist/0zI7Lf9Kj6Ts5CSCJeS6AF?si=afb5f2c7fd194dc0">Meditation Frequencies Spotify</a><br><a href="https://open.spotify.com/playlist/37i9dQZF1DWZqd5JICZI0u?si=07e29924cb544895">Relaxing Meditation Spotify</a><br><br><a href="https://music.apple.com/us/playlist/pure-meditation/pl.e896478fdf824a93ab2f99165c3a1422">Pure Meditation Apple Music</a><br><a href="https://music.apple.com/us/album/music-for-deep-sleep/1065821140">Deep Sleep Meditation Apple Music</a><br><br>Meditation tones have been used for centuries to positively stimulate the vegas nerve along your spine and calm your entire nervous system.</div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script>
+        $( function() {
+          var state = true;
+          $( "#button" ).on( "click", function() {
+            if ( state ) {
+              $( "#effect" ).animate({
+                backgroundColor: " #4db8ff",
+                color: "#fff",
+                width: 900
+              }, 1000 );
+            } else {
+              $( "#effect" ).animate({
+                backgroundColor: "#fff",
+                color: "#000",
+                width: 740,
+              }, 1000 );
+            }
+            state = !state;
+          });
+        } );
+        </script>
+    <script>
+    $( function() {
+      $( "#tabs" ).tabs();
+    } );
+    </script>
+</body>
+</html>

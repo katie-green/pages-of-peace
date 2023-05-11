@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Paprika&display=swap');
+
+html{
+  background-image: linear-gradient(#d9f2e6, #9fdfbf, #4d97d3, #20496a);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  overflow: auto;
+}
+
+body{
+  font-family: Paprika, Arial, Helvetica, sans-serif;
+}
+
+main{  
+  font-size: 87.5%;
+  width: 550px;
+  border: 3px solid rgb(73, 217, 222);
+  padding: 10px 50px;
+  border-radius: 50px;
+  margin: auto;
+  margin-top: 5em;
+}
+
+h1 { 
+  font-size: 250%;
+  text-align: center;
+  margin-bottom: 1em;
+}
+h2 {
+  font-size: 120%;
+  padding: 20px 20px 25px;
+  cursor: pointer;
+  background: url(/images/plus.png) no-repeat left center;
+}
+h2.minus {
+  background: url(/images/minus.png) no-repeat left center;
+}
+a {
+  color: black;
+  text-decoration: none; 
+}
+a:focus, a:hover {
+color: rgb(114, 242, 247); 
+}
+div {
+  display: none;
+}
+div.open {
+  display: block;
+}
+ul {
+  padding-left: 45px;
+}
+li {
+  padding-bottom: .25em;
+}
+p {
+  padding-bottom: .25em;
+  padding-left: 25px;
+}
+
+.nav ul{
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  background-color: rgba(255, 255, 255, 0.473);
+  backdrop-filter: blur(5px);
+}
+
+.nav li a{
+  color: rgb(23, 44, 75);
+  font-family: Paprika, "Helvetica Neue", "Times New Roman", "san-serif";
+  text-shadow: 2px 2px 5px rgb(73, 217, 222);
+}
+
+.nav ul li a::before {
+  content: '';
+  position: absolute;
+  background: #f0eec7;
+  transition: 1s;
+  transform: scale(.9);
+  z-index: -1;
+}
+
+.nav ul li a:hover::before {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #fbf488;
+}
+
+.nav ul li a:hover {
+  color: #f3e95a;
+  box-shadow: 0 0 5px #ffee10;
+  text-shadow: 0 0 5px #ffee10;
+}

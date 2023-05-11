@@ -1,0 +1,93 @@
+/*credit for glowing hover effect in nav bar: Diego Lopez
+https://codepen.io/dig-lopes/pen/WLVGda
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Paprika&display=swap');
+
+
+body{
+  color: rgb(23, 44, 75);
+  font-family: Paprika, "Helvetica Neue", "Times New Roman", "san-serif";
+  text-shadow: 2px 2px 5px rgb(73, 217, 222);
+}
+
+.nav ul{
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  background-color: rgba(255, 255, 255, 0.473);
+  backdrop-filter: blur(5px);
+
+}
+
+.nav li a{
+  color: rgb(23, 44, 75);
+  font-family: Paprika, "Helvetica Neue", "Times New Roman", "san-serif";
+  text-shadow: 2px 2px 5px rgb(73, 217, 222);
+}
+
+.nav ul li a::before {
+  content: '';
+  position: absolute;
+  background: #f0eec7;
+  transition: 1s;
+  transform: scale(.9);
+  z-index: -1;
+}
+
+ul li a:hover::before {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #fbf488;
+}
+
+.nav ul li a:hover {
+  color: #f3e95a;
+  box-shadow: 0 0 5px #ffee10;
+  text-shadow: 0 0 5px #ffee10;
+}
+
+.welcome{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heading{
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.051);
+  backdrop-filter: blur(10px);
+  font-size: 30px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.intro{
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.191);
+  backdrop-filter: blur(5px);
+  margin: 20px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.402);
+  backdrop-filter: blur(5px);
+  font-size: 15px;
+}
+
+.scaleParagraph{
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.191);
+  backdrop-filter: blur(5px);
+  margin: 50px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.402);
+  backdrop-filter: blur(5px);
+  font-size: 15px;
+}
+
+.best-day{
+  color: white;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  background-color: rgb(54, 77, 77);
+}

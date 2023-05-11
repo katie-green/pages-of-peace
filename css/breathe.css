@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Paprika&display=swap');
+.nav ul{
+    list-style-type: none;
+    background-color: rgba(255, 255, 255, 0.473);
+    backdrop-filter: blur(5px);
+    margin: 0;  
+    display: flex;
+    justify-content: space-around;  
+}
+.nav li a{
+    color: rgb(23, 44, 75);
+    font-family: Paprika, "Helvetica Neue", "Times New Roman", "san-serif";
+    text-shadow: 2px 2px 5px rgb(73, 217, 222);   
+
+  }
+  
+  .nav ul li a::before {
+    content: '';
+    position: absolute;
+    background: #f0eec7;
+    transition: 1s;
+    transform: scale(.9);
+    z-index: -1;
+  }
+  
+  .nav ul li a:hover::before {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #fbf488;
+  }
+  
+ .nav ul li a:hover {
+    color: #f3e95a;
+    box-shadow: 0 0 5px #ffee10;
+    text-shadow: 0 0 5px #ffee10;
+  }
+
+
+body {
+    font-family: 'Paprika', 'Helvetica Neue', Arial;
+    background: url(/images/forest.jpg) no-repeat center center/cover;
+
+}
+
+main{
+    color: white;
+    min-height:  100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+}
+
+h1 {
+    font-size: 60px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+/*slideshow #1*/
+img {
+    height: 200px;
+    margin-bottom: 20px;
+}
+
+#slides img {
+    display: none;
+}
+
+/*breathing circle css*/
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    width: 300px;
+    margin: auto;
+    position: relative;
+    transform: scale(1);
+    margin-top: 20px;
+}
+
+.gradient-circle {
+    background: conic-gradient(
+        #cceeff 0%,
+        #b3e6ff 40%,
+        #fefefe 40%,
+        #fefefe 60%,
+        #51a4ce 60%,
+        #326e8c 100%
+    );
+    height: 320px;
+    width: 320px;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    z-index: -2;
+    border-radius: 50%;
+}
+
+.circle {
+    background-color: #0a2837;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 50%;
+}
+
+.pointer-container {
+    position: absolute;
+    top: -40px;
+    left: 140px;
+    width: 20px;
+    height: 190px;
+    animation: rotate 7.5s linear forwards infinite;
+    transform-origin: bottom center;
+}
+
+.pointer {
+    background-color: white;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    display: block;
+}
+
+.container.grow {
+    animation: grow 3s linear forwards;
+}
+
+.container.shrink {
+    animation: shrink 3s linear forwards;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes grow {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.2);
+    }
+}
+
+@keyframes shrink {
+    from {
+        transform: scale(1.2);
+    }
+    to {
+        transform: scale(1);
+    }
+}

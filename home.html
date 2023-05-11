@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<!--*****************************************************
+    ***Modification Log***
+
+        #Original Author: Katie Green
+        #Date Created: January 20, 2023
+        #Current Version: 2.0
+        #Date Last Modified: February 8, 2023
+        #Last Modified by: Katie Green
+        #Modfication Log: Version 2.6
+
+            Version 0.0 - 1/20/2023 - Created homepage boilerplate and attached files
+            Version 0.1 - 1/22/2023 - rerouted plans from using gif as background to image, made nav bar, added text, modified css
+            
+            Version 2.0 - 2/7/2023 - finally created mod log, finished landing page, connected files
+            Version 2.5 - 2/8/2023 - created FAQ and support pages
+            Version 2.6 - 2/8/2023 - added content to support page
+            Version 2.7 - 2/9/2023 - worked on layout for support page
+
+            Version 3.0 - 2/10/2023 - added content to FAQ page
+            Version 3.1 - 2/11/2023 - worked on nav bar layout for FAQ and support pages
+
+            Version 4.0 - 2/20/2023 - added new page; breathing page
+            Version 4.1 - 2/22/2023 - added carousel to breathing page
+            Version 4.2 - 2/23/2023 - worked on confirmation page, nav bars and carousel - worked on mobile first             
+            Version 4.3 - 2/24/2023 - switched to slideshow from carousel 
+
+            Version 5.0 - 2/28/23 - created music page
+            Version 5.1 - 3/5/23 - jQuery plugin slider HomePage
+            Version 5.2 - 3/5/23 - jQuery plugin tabs Music page - also toggle for paragraph animation
+
+            Version 6.0 - 3/9/23 - final adjustments. added regex and datepicker widget
+            Version 6.1 - 3/10/23 - finalized. Hand wrote code in support section that did not fully function, but did not copy/paste. Hope that counts for something!
+
+
+
+    *****************************************************
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+
+    <style>
+        body{           
+            background-image: url(/images/night.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #custom-handle {
+    width: 3em;
+    height: 1.6em;
+    top: 50%;
+    margin-top: -.8em;
+    text-align: center;
+    line-height: 1.6em;
+        }
+    </style>
+
+
+</head>
+<header>
+    <nav class="nav">
+        <ul>
+           <li><a href="home.html">Home</a></li> 
+            <li><a href="TakeABreath.html">Take a Breath</a></li>
+            <li><a href="music.html">Music for the Soul</a></li>
+            <li><a href="support.html">Support</a></li>
+            <li><a href="FAQ.html">FAQ</a></li>
+        </ul>
+    </nav>
+</header>    
+<body>
+    <div class="heading">
+    <h1>Pages of Peace</h1>
+    </div>
+<!--introduction paragraph-->
+    <p class="intro">You are worthy of peace.<br>
+        You deserve tranquility.<br>
+        Take this time for yourself to rebalance and recenter.
+    </p>
+
+    <!--instructions for use of sliding scale
+    will update to scale with labels-->
+    <p class="scaleParagraph">How are you feeling today?<br>
+        Use the sliding scale to assess how you're doing.<br>
+        Now take a step back and observe those feelings as if they were gently floating by in a peaceful stream.</p>
+
+        <div id="slider">
+            <div id="custom-handle" class="ui-slider-handle"></div>
+        </div>    
+
+    <div class="best-day">
+    <label for="best_day">I felt best on this day:  </label>
+    <label><input type="text" name="best_day" id="best_day" autofocus></label>
+    </div>
+
+<script src="js/relax.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+<script src="jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+
+<script>
+$( function() {
+  var handle = $( "#custom-handle" );
+  $( "#slider" ).slider({
+    create: function() {
+      handle.text( $( this ).slider( "value" ) );
+    },
+    slide: function( event, ui ) {
+      handle.text( ui.value );
+    }
+  });
+} );
+</script>
+</body>
+
+</html>
